@@ -42,7 +42,7 @@ function UserDetailsPage() {
           <List.Item key={el.id}>{el.description}</List.Item>
         ))}
       </List>
-      <LinkButton href={`/users/edit/${user.id}`}>Edit user</LinkButton>
+      <LinkButton href={`/users/edit/${user.id}`} disabled={false}>Edit user</LinkButton>
     </Card>
     </Center>
     </>
