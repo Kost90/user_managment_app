@@ -1,0 +1,8 @@
+.sort-icon{
+    transition: 0.2s ease, color 0.2s ease;
+}
+
+.sort-icon:hover{
+    transform: scale(1.2);
+    color: darkgray;
+}
