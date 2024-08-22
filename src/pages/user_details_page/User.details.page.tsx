@@ -35,7 +35,7 @@ function UserDetailsPage() {
       <Text size="md">Gender: {user.gender}</Text>
       <Text size="md">Eyes: {user.eyes}</Text>
       <Text size="md">Hair: {user.hair}</Text>
-      <Text size="md">Glasses: {user.glasses ?'True':'False'}</Text>
+      <Text size="md">Glasses: {user.glasses?'True':'False'}</Text>
       <Text fw={600}>User roles:</Text>
       <List>
         {userRoles.map((el) => (

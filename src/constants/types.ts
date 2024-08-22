@@ -5,7 +5,7 @@ export type User = {
     gender: 'female' | 'male';
     hair: 'black' | 'brown' | 'blonde' | 'red' | 'grey';
     eyes: 'brown' | 'blue' | 'green' | 'grey';
-    glasses: 'glasses' | 'no-glasses';
+    glasses: 'glasses' | 'no-glasses'| boolean;
     roles:string[];
   };
 

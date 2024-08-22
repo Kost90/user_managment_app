@@ -21,17 +21,6 @@ export const fetchUsers = createAsyncThunk<User[]>('users/fetchUsers', async (_,
     }
 });
 
-// export const fetchUser = createAsyncThunk<User, string>('users/fetchUser',async (id, { rejectWithValue }) => {
-//       try {
-//         const controller = new AbortController();
-//         const signal = controller.signal;
-//         return await ServerApi.getUser({ id, signal });
-//       } catch (error: any) {
-//         return rejectWithValue(error.message || 'Failed to fetch user');
-//       }
-//     }
-//   );
-
 export const updateUser = createAsyncThunk<User,updateUserPayload>('users/updateUser', async ({ id, updates },{rejectWithValue}) => {
     try {
     const controller = new AbortController();
@@ -46,7 +35,6 @@ export const usersSlice = createSlice({
     name:'users',
     initialState:{
         users:initialUsers,
-        // selectedUser: null as User | null,
         loading:false,
         error:null as unknown as string || null, 
     },
@@ -75,18 +63,6 @@ export const usersSlice = createSlice({
             state.error = action.payload as string;
             state.loading = false;
         })
-        // .addCase(fetchUser.pending, (state) => {
-        //     state.loading = true;
-        //     state.error = null;
-        //   })
-        //   .addCase(fetchUser.fulfilled, (state, action) => {
-        //     state.selectedUser = action.payload;
-        //     state.loading = false;
-        //   })
-        //   .addCase(fetchUser.rejected, (state, action) => {
-        //     state.error = action.payload as string;
-        //     state.loading = false;
-        //   })
         .addCase(updateUser.pending, (state) => {
             state.loading = true;
             state.error = null;
@@ -109,7 +85,6 @@ export const usersSlice = createSlice({
 
 export const {updateUsers} = usersSlice.actions;
 export const selectUsers = (state: RootState) => state.users;
-// export const selectSelectedUser = (state: RootState) => state.users.selectedUser;
 export const selectUsersForFilter = (state: RootState) => state.users.users;
 export const selectFilteredUsers = createSelector([selectUsersForFilter, selectFilters],(users:User[],filters:Filters) => {
     return users.filter((user) => {

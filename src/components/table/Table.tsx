@@ -34,7 +34,6 @@ function TableComponent({activePage}:{activePage:number}) {
       </Center>
     )
   }
-  
   return (
     <Center>
       <Table stickyHeader stickyHeaderOffset={60}>
@@ -71,7 +70,7 @@ export function TableRows({ ...props }: TableRowsProps) {
         <Table.Td>{props.gender}</Table.Td>
         <Table.Td>{props.hair}</Table.Td>
         <Table.Td>{props.eyes}</Table.Td>
-        <Table.Td>{props.glasses === 'no-glasses'?'false':'true'}</Table.Td>
+        <Table.Td>{!props.glasses?'false':'true'}</Table.Td>
         <Table.Td>
         <Image w={50} src={`uploads/${props.avatar}`} alt={props.name} radius={'md'} />
         </Table.Td>

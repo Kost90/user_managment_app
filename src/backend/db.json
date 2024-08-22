@@ -6,8 +6,8 @@
       "id": "fM8N0UQ",
       "gender": "female",
       "hair": "black",
-      "eyes": "green",
-      "glasses": "no-glasses",
+      "eyes": "brown",
+      "glasses": false,
       "roles": [
         "1",
         "2"
@@ -18,9 +18,9 @@
       "avatar": "bob.png",
       "id": "l0m9GZr",
       "gender": "male",
-      "hair": "black",
+      "hair": "blonde",
       "eyes": "brown",
-      "glasses": "glasses",
+      "glasses": false,
       "roles": [
         "1",
         "3"
@@ -33,7 +33,7 @@
       "gender": "female",
       "hair": "red",
       "eyes": "blue",
-      "glasses": true,
+      "glasses": false,
       "roles": [
         "1"
       ]
